@@ -1,0 +1,5 @@
+# FastAPI framework for building the calculator API.
+fastapi>=0.104
+
+# ASGI server for running the FastAPI application.
+uvicorn[standard]>=0.24

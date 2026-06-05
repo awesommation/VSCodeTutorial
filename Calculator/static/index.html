@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="calculator-shell">
+      <h1>Modern Calculator</h1>
+      <div class="display" id="display">0</div>
+      <div class="grid">
+        <button class="button secondary" data-value="7">7</button>
+        <button class="button secondary" data-value="8">8</button>
+        <button class="button secondary" data-value="9">9</button>
+        <button class="button operator" data-value="/">÷</button>
+
+        <button class="button secondary" data-value="4">4</button>
+        <button class="button secondary" data-value="5">5</button>
+        <button class="button secondary" data-value="6">6</button>
+        <button class="button operator" data-value="*">×</button>
+
+        <button class="button secondary" data-value="1">1</button>
+        <button class="button secondary" data-value="2">2</button>
+        <button class="button secondary" data-value="3">3</button>
+        <button class="button operator" data-value="-">−</button>
+
+        <button class="button secondary" data-value="0">0</button>
+        <button class="button secondary" data-value=".">.</button>
+        <button class="button action" id="clear">C</button>
+        <button class="button operator" data-value="+">+</button>
+      </div>
+      <button class="button equals" id="calculate">=</button>
+      <div class="note">Powered by FastAPI with a JSON API at <code>/api/calc</code></div>
+    </main>
+
+    <!-- Load the calculator UI logic from the static JavaScript file. -->
+    <script src="/static/app.js"></script>
+  </body>
+</html>
