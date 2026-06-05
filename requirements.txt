@@ -1,0 +1,8 @@
+# Core server framework used to build and render the Flask web application.
+Flask>=2.3
+
+# HTTP client library used to request weather data from the OpenWeatherMap API.
+requests>=2.31
+
+# Optional helper to load environment variables from a local .env file during development.
+python-dotenv>=1.0
