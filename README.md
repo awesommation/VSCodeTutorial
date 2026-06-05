@@ -1,52 +1,80 @@
-# Flask Weather App
+# VSCode Tutorial - Independent Apps
 
-A small Flask application that allows users to enter a city name and view the current weather with an icon.
+This repository contains two independent web applications as separate projects:
 
-## Overview
+## Projects
 
-- `app.py` contains the Flask server, city form handling, OpenWeatherMap API integration, and result rendering.
-- `templates/index.html` renders the search form, error messages, and weather result card.
-- `static/flask_weather/styles.css` stores the Flask app-specific stylesheet.
-- `requirements.txt` lists the Python dependencies.
+### 1. [FlaskWeather](./FlaskWeather)
+A Flask-based weather lookup application that queries the OpenWeatherMap API.
 
-## Setup
+**Features:**
+- Search weather by city, state, and country
+- Real-time temperature display in Celsius or Fahrenheit
+- Weather icons from OpenWeatherMap
+- Error handling for invalid locations
 
-1. Create and activate a Python virtual environment:
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
+**Quick Start:**
+```bash
+cd FlaskWeather
+pip install -r requirements.txt
+# Set WEATHER_API_KEY in .env or environment
+python app.py
+# Open http://localhost:5000
+```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. [Calculator](./Calculator)
+A modern calculator built with FastAPI and a responsive frontend.
 
-3. Set your OpenWeatherMap API key:
-   - Windows PowerShell:
-     ```powershell
-     $env:WEATHER_API_KEY = "your_api_key_here"
-     ```
-   - Or create a `.env` file in the project root with:
-     ```text
-     WEATHER_API_KEY=your_api_key_here
-     ```
+**Features:**
+- Real-time calculation display
+- Supports +, −, ×, ÷, ^, % operations
+- Safe expression evaluation
+- Clean dark-themed UI
+- JSON API backend
 
-4. Run the Flask app:
-   ```bash
-   python app.py
-   ```
+**Quick Start:**
+```bash
+cd Calculator
+pip install -r requirements.txt
+python app.py
+# Open http://localhost:8000
+```
 
-5. Open the app in a browser:
-   ```text
-   http://127.0.0.1:5000/
-   ```
+## Project Structure
 
-## Usage
+```
+VSCodeTutorial/
+├── FlaskWeather/           # Flask weather app
+│   ├── app.py
+│   ├── templates/
+│   ├── static/
+│   ├── requirements.txt
+│   ├── README.md
+│   └── .env.example
+├── Calculator/             # FastAPI calculator app
+│   ├── app.py
+│   ├── static/
+│   ├── requirements.txt
+│   └── README.md
+└── README.md              # This file
+```
 
-- Enter a city name and click `Search`.
-- If the city is found, the app displays current temperature, weather description, and an icon.
-- If the city is invalid or the lookup fails, an error message is shown.
+## Each App Is Independent
+
+Each application has its own:
+- Python dependencies (`requirements.txt`)
+- Static files and assets
+- Documentation (`README.md`)
+- Configuration files
+
+You can run each app separately or both at different ports.
+
+## Requirements
+
+- Python 3.8+
+- Each app specifies its dependencies in its own `requirements.txt`
+
+Refer to each app's `README.md` for detailed setup and usage instructions.
 
 ## Notes
 
